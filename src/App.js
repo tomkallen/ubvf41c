@@ -5,27 +5,30 @@ import axios from 'axios'
 
 class App extends Component {
 
-  componentDidMount () {
-   axios.post('/login', {username: 'vasya', password: '12345678'})
+  state = {username: '', password: '', currentUser: '', error: ''}
+
+  handleChange = (event, field) => {
+    this.setState({[field]: event.target.value})
+  }
+
+  handleSubmit = () => {
+    const {username, password} = this.state
+    axios.post('/api/user/login', {username, password})
+      .then(res => this.setState({currentUser: res.data.user, error: ''}))
+      .catch(() => this.setState({error: 'Invalid login', currentUser: ''}))
   }
 
   render () {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div>
+          <input type="text" onChange={e => this.handleChange(e, 'username')} value={this.state.username}/>
+          <input type="text" onChange={e => this.handleChange(e, 'password')} value={this.state.password}/>
+          <button onClick={this.handleSubmit}>Submit</button>
+          <br/>
+          {this.state.currentUser ? <p>Hello {this.state.currentUser}</p> : null}
+          {this.state.error ? <p>{this.state.error}</p> : null}
+        </div>
       </div>
     )
   }

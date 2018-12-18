@@ -30,12 +30,12 @@ module.exports = function (passport) {
     function (req, username, password, done) {
       User.findOne({username}, function (err, user) {
         if (err) return done(err)
-        if (!user) return done(null, false, req.flash('loginMessage', 'No user found.'))
-        bcrypt.compare(password, user.password).then(match => {
-          if (!match) return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.'))
-          return done(null, user)
-        })
-
+        if (!user) return done(null, false, 'No user found')
+        bcrypt.compare(password, user.password)
+          .then(match => {
+            if (!match) return done(null, false, 'Wrong password')
+            return done(null, user)
+          })
       })
     }))
 }

@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f48aeb32-dd7f-4919-8b0f-65bf3e691651" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/comra.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/config/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/config/passport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/userAuthModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/utils/existingUserValidator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/utils/newUserValidator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/passport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +22,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-163">
+            <state relative-caret-position="24">
               <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
             </state>
           </provider>
@@ -38,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/config/passport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+            <state relative-caret-position="768">
+              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -49,23 +46,46 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
+            <state relative-caret-position="336">
+              <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/routes/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="240">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -91,9 +111,12 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/routes/user.js" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/server/config/passport.js" />
         <option value="$PROJECT_DIR$/server/routes/common.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
   </component>
@@ -106,21 +129,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ubvf41c" type="b2602c69:ProjectViewProjectNode" />
               <item name="ubvf41c" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ubvf41c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ubvf41c" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ubvf41c" type="b2602c69:ProjectViewProjectNode" />
@@ -154,6 +172,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -186,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.server">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -232,24 +251,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545071175333</updated>
-      <workItem from="1545071176979" duration="9282000" />
+      <workItem from="1545071176979" duration="9479000" />
+      <workItem from="1545149096092" duration="3806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9282000" />
+    <option name="totallyTimeSpent" value="13285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24980299" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32936507" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936507" />
@@ -257,6 +273,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936507" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -266,22 +286,45 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/server/routes/user.js" />
+    <entry file="file://$PROJECT_DIR$/server/models/userAuthModel.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2587">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
+        <state relative-caret-position="24">
           <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/user.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="34" />
+        <state relative-caret-position="120">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/userAuthModel.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -290,27 +333,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/config/passport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+        <state relative-caret-position="768">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
         </state>
       </provider>
     </entry>
