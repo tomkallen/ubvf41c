@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
 import './App.css'
-import axios from 'axios'
+import { login } from './redux/actions/api.action'
+import { connect } from 'react-redux'
 
 class App extends Component {
 
@@ -13,9 +13,7 @@ class App extends Component {
 
   handleSubmit = () => {
     const {username, password} = this.state
-    axios.post('/api/user/login', {username, password})
-      .then(res => this.setState({currentUser: res.data.user, error: ''}))
-      .catch(() => this.setState({error: 'Invalid login', currentUser: ''}))
+    this.props.login({username, password})
   }
 
   render () {
@@ -26,12 +24,22 @@ class App extends Component {
           <input type="text" onChange={e => this.handleChange(e, 'password')} value={this.state.password}/>
           <button onClick={this.handleSubmit}>Submit</button>
           <br/>
-          {this.state.currentUser ? <p>Hello {this.state.currentUser}</p> : null}
-          {this.state.error ? <p>{this.state.error}</p> : null}
+          {this.props.isLoggedIn ? <p>Hello {this.props.user.user}</p> : null}
+          {this.props.apiMessage ? <p>{this.props.apiMessage}</p> : null}
         </div>
       </div>
     )
   }
 }
 
-export default App
+const mapDispatchToProps = (dispatch) => ({
+  login: (data) => dispatch(login(data))
+})
+
+const mapStateToProps = state => ({
+  isLoggedIn: state.api.isLoggedIn,
+  apiMessage: state.api.apiMessage,
+  user: state.api.user
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
