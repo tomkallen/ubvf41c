@@ -2,8 +2,14 @@ import axios from 'axios'
 
 const API = {}
 
-API.login = (data) => new Promise((res, rej) =>
+API.login = (data) => new Promise((res, rej) => {
   post('/api/user/login', data)
+    .then(response => res(response.data))
+    .catch(error => rej(error))
+})
+
+API.checkLogin = () => new Promise((res, rej) =>
+  axios.get('/api/user/login')
     .then(response => res(response.data))
     .catch(error => rej(error))
 )

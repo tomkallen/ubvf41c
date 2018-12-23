@@ -1,6 +1,6 @@
 module.exports = function (app, passport) {
   app.get('/api/user/login', isLoggedIn, function (req, res) {
-    res.status(200).json({user: req.user.username})
+    res.status(200).json({user: req.user})
   })
 
   app.post('/api/user/login', (req, res, next) => {

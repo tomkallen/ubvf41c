@@ -29,3 +29,16 @@ export const login = (payload) => {
       .catch(() => dispatch(endFetch('Incorrect username or password')))
   }
 }
+
+export const checkLogin = () => {
+  return (dispatch, getState) => {
+    if (getState().api.isLoggedIn) return
+    dispatch(startFetch())
+    API.checkLogin()
+      .then((res) => {
+        dispatch(endFetch())
+        dispatch(setLoginState({user: res.user.username}))
+      })
+      .catch(() => dispatch(endFetch('Not yet authorized')))
+  }
+}

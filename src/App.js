@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import { login } from './redux/actions/api.action'
+import { login, checkLogin } from './redux/actions/api.action'
 import { connect } from 'react-redux'
 
 class App extends Component {
@@ -14,6 +14,10 @@ class App extends Component {
   handleSubmit = () => {
     const {username, password} = this.state
     this.props.login({username, password})
+  }
+
+  componentDidMount () {
+    this.props.checkLogin()
   }
 
   render () {
@@ -33,7 +37,8 @@ class App extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  login: (data) => dispatch(login(data))
+  login: (data) => dispatch(login(data)),
+  checkLogin: () => dispatch(checkLogin())
 })
 
 const mapStateToProps = state => ({
