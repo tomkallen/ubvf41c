@@ -1,0 +1,12 @@
+html, body, .App {
+    height: 100vh;
+    margin: 0;
+    background-color: #fff;
+}
+
+.App {
+    display: flex;
+    width: 80rem;
+    margin: 0 auto;
+    background-color: #333;
+}

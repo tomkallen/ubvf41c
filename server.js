@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 app.use(session({secret: 'catsliketoeatsnails'}))
 app.use(passport.initialize())
-app.use(passport.session())
+app.use(passport.session({maxAge: 3600000}))
 app.use(express.static(__dirname + '/build'))
 app.use(flash())
 
