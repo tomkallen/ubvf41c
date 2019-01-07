@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import './App.css'
 import Login from './pages/login.page'
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import ProfilePage from './pages/profile.page'
 import { connect } from 'react-redux'
 import { checkLogin, login } from './redux/actions/api.action'
+import { PrivateRoute } from './PrivateRoute'
 
 class App extends Component {
   componentDidMount () {
@@ -21,18 +22,6 @@ class App extends Component {
       </Router>
     )
   }
-}
-
-function PrivateRoute ({component: Component, ...rest}) {
-  return (
-    <Route
-      {...rest}
-      render={props => rest.isLoggedIn
-        ? <Component {...props} />
-        : <Redirect to={{pathname: '/', state: {from: props.location}}}/>
-      }
-    />
-  )
 }
 
 const mapDispatchToProps = (dispatch) => ({
