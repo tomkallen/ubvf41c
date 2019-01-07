@@ -7,31 +7,26 @@ class Login extends Component {
 
   state = {username: '', password: '', currentUser: '', error: ''}
 
-  handleChange = (event, field) => {
-    this.setState({[field]: event.target.value})
-  }
+  handleChange = (event, field) => this.setState({[field]: event.target.value})
 
   handleSubmit = () => {
+    if (this.props.isLoading) return
     const {username, password} = this.state
     this.props.login({username, password})
   }
 
-  // componentDidMount () {
-  //   this.props.checkLogin()
-  // }
-
   render () {
-    console.log(this.props.location)
-    if (this.props.isLoggedIn) return <Redirect to={{pathname: this.props.location.state.from.pathname}}/>
+    if (this.props.isLoggedIn) return <Redirect to={'/dash'}/>
     return (
       <div className={'Login'}>
-        <div>
-          <input type="text" onChange={e => this.handleChange(e, 'username')} value={this.state.username}/>
-          <input type="text" onChange={e => this.handleChange(e, 'password')} value={this.state.password}/>
-          <button onClick={this.handleSubmit}>Submit</button>
-          <br/>
-          {this.props.isLoggedIn ? <p>Hello {this.props.user.user}</p> : null}
-          {this.props.apiMessage ? <p>{this.props.apiMessage}</p> : null}
+        <div className={'Login-box'}>
+          {this.props.apiMessage ? <div className={'Login-toast'}>{this.props.apiMessage}</div> : null}
+          <input placeholder={'login'} type="text" onChange={e => this.handleChange(e, 'username')}
+                 value={this.state.username}/>
+          <input placeholder={'password'} type="password" onChange={e => this.handleChange(e, 'password')}
+                 value={this.state.password}/>
+          <div className={'button'} onClick={this.handleSubmit}>Submit</div>
+          <p>Or click <span className="button">this button</span> to create a new account</p>
         </div>
       </div>
     )
@@ -45,6 +40,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const mapStateToProps = state => ({
   isLoggedIn: state.api.isLoggedIn,
+  isLoading: state.api.isAPIFetching,
   apiMessage: state.api.apiMessage,
   user: state.api.user
 })

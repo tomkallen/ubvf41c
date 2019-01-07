@@ -5,7 +5,7 @@ import "./pages.css"
 class ProfilePage extends Component {
   render () {
     return (
-      <div className={'Profile'}>{this.props.user.user}</div>
+      <div className={'Profile'}>Hi {this.props.user.user}</div>
     )
   }
 }

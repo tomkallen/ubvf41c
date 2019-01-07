@@ -39,6 +39,6 @@ export const checkLogin = () => {
         dispatch(endFetch())
         dispatch(setLoginState({user: res.user.username}))
       })
-      .catch(() => dispatch(endFetch('Not yet authorized')))
+      .catch(() => dispatch(endFetch()))
   }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './App.css'
-import LeftMenu from './components/leftMenu/leftMenu.component'
 import Login from './pages/login.page'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import ProfilePage from './pages/profile.page'
@@ -16,10 +15,8 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <LeftMenu/>
-          <Route exact path={'/'} component={ProfilePage}/>
-          <Route path={'/login'} component={Login}/>
-          <PrivateRoute path={'/profile'} component={ProfilePage} {...this.props}/>
+          <Route exact path={'/'} component={Login}/>
+          <PrivateRoute path={'/dash'} component={ProfilePage} {...this.props}/>
         </div>
       </Router>
     )
@@ -27,13 +24,12 @@ class App extends Component {
 }
 
 function PrivateRoute ({component: Component, ...rest}) {
-  console.log(rest)
   return (
     <Route
       {...rest}
       render={props => rest.isLoggedIn
         ? <Component {...props} />
-        : <Redirect to={{pathname: '/login', state: {from: props.location}}}/>
+        : <Redirect to={{pathname: '/', state: {from: props.location}}}/>
       }
     />
   )
@@ -44,7 +40,7 @@ const mapDispatchToProps = (dispatch) => ({
   checkLogin: () => dispatch(checkLogin())
 })
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   isLoggedIn: state.api.isLoggedIn,
   apiMessage: state.api.apiMessage,
   user: state.api.user
